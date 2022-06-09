@@ -1,0 +1,41 @@
+// mapbox secret token: sk.eyJ1IjoiY294Y285NiIsImEiOiJjbDQ1eTR3N3EwMzhiM2lteDIwMXJ4ODR1In0.VPDgT2kJluvzJC6sjKnSeA
+
+// bucket: "tilestream-tilesets-production"
+
+// key: "bc/_pending/afet7lp14l12fls02s6mf74lc/coxco96"
+
+// accessKeyId: "ASIATNLVGLR2HUZIL7BO"
+
+// secretAccessKey: "lxrpdl5Rr6xqQOTXbV0yTRh0QACsnCqm1bF5OrMa"
+
+// sessionToken: "FwoGZXIvYXdzECUaDK1l8p1slmqiSchAmiKTAvpezKbx66AQPCy95JXmgDTlWu0eK5PJst4tOirGG7UqDInEZJmE+cTUKJdDyKhfv6UxS+ldg+LI9nYFB2c4aDmPSAWh4jiygFgEbtavlwVDE8YzBKsKfWPifw/Coj239WfHtM435uVjrY3pbgNJnkGOWrlyX49EmivO3VEGq1tdgSke9m0Ju3gwSG7/cRtCgMM0Ee/Jna0ZveRJUTBuOzfIUc8ys1g5iXMpYYjXYMjhZZv2ORl0NxsE/rolWQnctYQBrvUdB8tOeLB+rLjV6TOlbYXZz+rabl/VpcTsy38kOnZDbLyTLtwmUmUM7Qb29xYyCaMsMSWK4MvTnmXfhGeih7AQcr2dQ5nH3tyAhVnoXOVtKOSciZUGMikk59FCj0iTONbKfnqiQzUxXl3bbbbFkacJzm5FkQ5X5+toweTfEf+/OQ=="
+
+// url: "https://tilestream-tilesets-production.s3.amazonaws.com/bc/_pending/afet7lp14l12fls02s6mf74lc/coxco96"
+
+
+export AWS_ACCESS_KEY_ID="ASIATNLVGLR2HUZIL7BO"
+export AWS_SECRET_ACCESS_KEY="lxrpdl5Rr6xqQOTXbV0yTRh0QACsnCqm1bF5OrMa"
+export AWS_SESSION_TOKEN="FwoGZXIvYXdzECUaDK1l8p1slmqiSchAmiKTAvpezKbx66AQPCy95JXmgDTlWu0eK5PJst4tOirGG7UqDInEZJmE+cTUKJdDyKhfv6UxS+ldg+LI9nYFB2c4aDmPSAWh4jiygFgEbtavlwVDE8YzBKsKfWPifw/Coj239WfHtM435uVjrY3pbgNJnkGOWrlyX49EmivO3VEGq1tdgSke9m0Ju3gwSG7/cRtCgMM0Ee/Jna0ZveRJUTBuOzfIUc8ys1g5iXMpYYjXYMjhZZv2ORl0NxsE/rolWQnctYQBrvUdB8tOeLB+rLjV6TOlbYXZz+rabl/VpcTsy38kOnZDbLyTLtwmUmUM7Qb29xYyCaMsMSWK4MvTnmXfhGeih7AQcr2dQ5nH3tyAhVnoXOVtKOSciZUGMikk59FCj0iTONbKfnqiQzUxXl3bbbbFkacJzm5FkQ5X5+toweTfEf+/OQ=="
+
+curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d "{
+    "url": \\"http://'tilestream-tilesets-production'.s3.amazonaws.com/'da/_pending/vid2eqlq2n02fo0034u6y54lc/coxco96'\\",
+    "tileset": "coxco96.2022_rendered_image.tif",
+    "name": "2022 Rendered Flood Data"
+  }" "https://api.mapbox.com/uploads/v1/coxco96?access_token=sk.eyJ1IjoiY294Y285NiIsImEiOiJjbDQ1eTR3N3EwMzhiM2lteDIwMXJ4ODR1In0.VPDgT2kJluvzJC6sjKnSeA"
+
+
+
+
+  curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d "{
+    "url": "http://{bucket}.s3.amazonaws.com/{key}",
+    "tileset": "coxco96.traverse-bay",
+    "name": "Traverse Bay"
+  }" 'https://api.mapbox.com/uploads/v1/coxco96?access_token=YOUR_MAPBOX_ACCESS_TOKEN'
+
+  curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
+      "url": "https://'tilestream-tilesets-production'.s3.amazonaws.com/'da/_pending/vid2eqlq2n02fo0034u6y54lc/coxco96'",
+      "tileset": "coxco96.2022_rendered_image.tif",
+      "name": "2022 Rendered Flood Data"
+  }' "https://api.mapbox.com/uploads/v1/coxco96?access_token=sk.eyJ1IjoiY294Y285NiIsImEiOiJjbDQ1eTR3N3EwMzhiM2lteDIwMXJ4ODR1In0.VPDgT2kJluvzJC6sjKnSeA"
+
+  curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{ "url": "https://'tilestream-tilesets-production'.s3.amazonaws.com/'bc/_pending/afet7lp14l12fls02s6mf74lc/coxco96'", "tileset": "coxco96.52_rendered_bluegreen", "name": "2052 GreentoBlue Rendered Flood Data"}' 'https://api.mapbox.com/uploads/v1/coxco96?access_token=sk.eyJ1IjoiY294Y285NiIsImEiOiJjbDQ1eTR3N3EwMzhiM2lteDIwMXJ4ODR1In0.VPDgT2kJluvzJC6sjKnSeA'
