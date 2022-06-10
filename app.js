@@ -4,7 +4,8 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/coxco96/cl47lbr7d003t14sb0bhuhdb3',
     zoom: 9,
     center: [-80.493550, 25.561938],
-    maxBounds: [[-81.7, 25], [-79.4, 26.802]]
+    maxBounds: [[-81.7, 25], [-79.4, 26.802]],
+    minZoom: 9
 });
 
 console.log(map.getBounds())

@@ -1,96 +1,158 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Miami-Dade Flooding</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
-<style>
-body { 
-    margin: 0; 
-    padding: 0; 
-}
-#map { 
-    position: absolute; 
-    top: 0; 
-    bottom: 0; 
-    width: 100%; 
-}
-</style>
+    <meta charset="utf-8">
+    <title>Miami-Dade Flooding</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 </head>
+
 <body>
-<style>
-    #menu {
-        background: #fff;
-        position: absolute;
-        z-index: 1;
-        top: 10px;
-        right: 10px;
-        border-radius: 3px;
-        width: 120px;
-        border: 1px solid rgba(0, 0, 0, 0.4);
-        font-family: 'Open Sans', sans-serif;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D2D5D5;
+        }
 
-    #menu a {
-        font-size: 13px;
-        color: #404040;
-        display: block;
-        margin: 0;
-        padding: 0;
-        padding: 10px;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-        text-align: center;
-    }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            left: 25%;
+            right: 25%;
+            width: 50%;
+        }
 
-    #menu a:last-child {
-        border: none;
-    }
+        #menu {
+            background: #fff;
+            position: absolute;
+            z-index: 1;
+            top: 10%;
+            left: 75%;
+            border-radius: 3px;
+            width: 300px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            font-family: 'Open Sans', sans-serif;
+        }
 
-    #menu a:hover {
-        background-color: #f8f8f8;
-        color: #404040;
-    }
+        #menu a {
+            font-size: 13px;
+            color: #404040;
+            display: block;
+            margin: 0;
+            padding: 0;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
 
-    #menu a.active {
-        background-color: #3887be;
-        color: #ffffff;
-    }
+        #menu a:last-child {
+            border: none;
+        }
 
-    #menu a.active:hover {
-        background: #3074a4;
-    }
+        #menu a:hover {
+            background-color: #f8f8f8;
+            color: #404040;
+        }
 
-    #legend-gradient {
-        width: 280px;
-        height: 40px;
-        background: linear-gradient(to right, #ffffcc, #c7e9b4 20%, #7fcdbb 40%, #41b6c4 60%, #0c2c84);
-        z-index: 999;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        display: flex;
-    }
+        #menu a.active {
+            background-color: #3887be;
+            color: #ffffff;
+        }
 
-    #legend {
-        width: 300px;
-        height: 60px;
-        z-index: 999;
-        left: 20px;
-        position: absolute;
-        background-color: white;
-    }
-</style>
+        #menu a.active:hover {
+            background: #3074a4;
+        }
 
-<nav id="menu"></nav>
-<div id="legend">
-<div id="legend-gradient"></div>
-</div>
-<div id="map"></div>
+        #legend-gradient {
+            width: 280px;
+            height: 40px;
+            background: linear-gradient(to right, #ffffcc, #c7e9b4 20%, #7fcdbb 40%, #41b6c4 60%, #0c2c84);
+            z-index: 999;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            display: flex;
+        }
 
-<script src="app.js"></script>
+        #legend {
+            width: 320px;
+            height: 100px;
+            z-index: 999;
+            left: 74%;
+            top: 18%;
+            position: absolute;
+            background-color: rgba(194, 194, 194, 0.576);
+            border: #0c2c846d;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        .legend-text-left {
+            width: 100;
+            height: 50px;
+            z-index: 999;
+            font-size: 14px;
+            position: absolute;
+            padding: 10px;
+            top: 60%;
+        }
+
+        .legend-text-right {
+            width: 100px;
+            height: 50px;
+            z-index: 999;
+            font-size: 14px;
+            position: absolute;
+            left: 67%;
+            padding: 10px;
+            top: 60%;
+        }
+
+        @media screen and (max-width: 815px) {
+            #map {
+                margin: auto;
+                height: 70%;
+                max-width: 100%;
+                left:10%;
+                right: 10%;
+                width: 80%;
+            }
+
+            #legend {
+                margin: auto;
+                max-width: 100%;
+                left:10%;
+                right: 10%;
+                width: 80%;
+                top: 85%;
+            
+            }
+            #menu {
+                margin: auto;
+                max-width: 100%;
+                left:10%;
+                right: 10%;
+                width: 80%;
+            }
+        }
+    </style>
+
+    <nav id="menu"></nav>
+    <div id="legend">
+        <div id="legend-gradient"></div>
+        <div class="legend-text-left">low flood risk</div>
+        <div class="legend-text-right">high flood risk</div>
+    </div>
+    <div id="map"></div>
+
+    <script src="app.js"></script>
 
 </body>
+
 </html>
