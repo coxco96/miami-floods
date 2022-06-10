@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
     minZoom: 9
 });
 
-console.log(map.getBounds())
+
 // wait until map has finished loading
 
 map.on('load', () => {

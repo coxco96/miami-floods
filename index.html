@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <title>Miami-Dade Flooding</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 </head>
@@ -15,6 +19,7 @@
             margin: 0;
             padding: 0;
             background-color: #D2D5D5;
+            font-family: 'Noto Serif', serif;
         }
 
         #map {
@@ -24,18 +29,19 @@
             display: flex;
             right: 30%;
             width: 70%;
+            
         }
 
         #menu {
             background: #fff;
-            position: absolute;
+            position: fixed;
             z-index: 1;
             top: 10%;
             left: 75%;
             border-radius: 3px;
             width: 300px;
             border: 1px solid rgba(0, 0, 0, 0.4);
-            font-family: 'Open Sans', sans-serif;
+            max-width: 100%;
         }
 
         #menu a {
@@ -85,11 +91,12 @@
             z-index: 999;
             left: 74%;
             top: 18%;
-            position: absolute;
+            position: fixed;
             background-color: rgba(194, 194, 194, 0.576);
             border: #0c2c846d;
             border-style: solid;
             border-radius: 10px;
+            max-width: 100%;
         }
 
         .legend-text-left {
@@ -118,7 +125,7 @@
                 margin: auto;
                 height: 70%;
                 max-width: 100%;
-                left:10%;
+                left: 10%;
                 right: 10%;
                 width: 80%;
             }
@@ -126,16 +133,19 @@
             #legend {
                 margin: auto;
                 max-width: 100%;
-                left:10%;
+                left: 10%;
                 right: 10%;
                 width: 80%;
                 top: 85%;
-            
+                position: fixed;
+                
+
             }
+
             #menu {
                 margin: auto;
                 max-width: 100%;
-                left:10%;
+                left: 10%;
                 right: 10%;
                 width: 80%;
             }
