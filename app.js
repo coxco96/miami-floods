@@ -1,11 +1,13 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY294Y285NiIsImEiOiJja3BrY2k0ZHgwa3Y0MnZwYTl3NWs4emJ5In0.ItwJEcRmF0LwO1DkHFgpZw';
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/coxco96/cl47k6bty000p14pcy1to4okd',
+    style: 'mapbox://styles/coxco96/cl47lbr7d003t14sb0bhuhdb3',
     zoom: 9,
-    center: [-80.493550, 25.561938]
+    center: [-80.493550, 25.561938],
+    maxBounds: [[-81.7, 25], [-79.4, 26.802]]
 });
 
+console.log(map.getBounds())
 // wait until map has finished loading
 
 map.on('load', () => {

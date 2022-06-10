@@ -62,9 +62,32 @@ body {
     #menu a.active:hover {
         background: #3074a4;
     }
+
+    #legend-gradient {
+        width: 280px;
+        height: 40px;
+        background: linear-gradient(to right, #ffffcc, #c7e9b4 20%, #7fcdbb 40%, #41b6c4 60%, #0c2c84);
+        z-index: 999;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+    }
+
+    #legend {
+        width: 300px;
+        height: 60px;
+        z-index: 999;
+        left: 20px;
+        position: absolute;
+        background-color: white;
+    }
 </style>
 
 <nav id="menu"></nav>
+<div id="legend">
+<div id="legend-gradient"></div>
+</div>
 <div id="map"></div>
 
 <script src="app.js"></script>
