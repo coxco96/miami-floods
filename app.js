@@ -77,7 +77,7 @@ map.on('idle', () => {
         const link = document.createElement('a');
         link.id = id;
         link.href = '#';
-        link.innerHTML = "Current View: " + '2022<br><br>Click to change.';
+        link.innerHTML = "Current View: 2022. Click to change.";
         link.className = 'active';
 
 

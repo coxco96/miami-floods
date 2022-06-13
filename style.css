@@ -34,24 +34,25 @@ body {
 
 #menu {
     background: #0F3588;
-    /* border-radius: 10px; */
-    width: 30%;
+    border-radius: 10px;
+    width: 50%;
     border: 1px solid rgba(0, 0, 0, 0.4);
     max-width: 100%;
     flex-basis: 8%;
-    margin: 1%;
+    margin: 2% auto 0;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: block;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
     
     
 
 }
 
 #menu a {
-    font-size: 14px;
+    font-size: 1em;
     color: #ffffff;
     margin: 0;
     text-decoration: none;
@@ -62,6 +63,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    
 }
 
 #menu a:last-child {
@@ -83,6 +86,7 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 
 
@@ -93,12 +97,13 @@ body {
 
 #legend {
 
-    width: 90%;
+    width: 80%;
     flex-basis: 10%;
-    background-color: rgba(194, 194, 194, 0.576);
-    border: #0c2c846d;
-    border-style: solid;
-    border-radius: 10px;
+    margin: 2.5% auto 0 auto;
+    /* background-color: rgba(194, 194, 194, 0.576); */
+    background-color: rgba(162, 162, 162, 0.313);
+    border: .09em solid #0c2c846d;
+    border-radius: 5px;
     align-self: center;
     display: flex;
     justify-content: center;
@@ -119,25 +124,28 @@ body {
 }
 
 .legend-text-left {
-    font-size: 12px;
+    font-size: .85em;
     padding: 2px;
     flex-basis: 20%;
-    /* align-self: flex-end; */
-    /* border-style: solid; */
     text-align: center;
    
 
 }
 
 .legend-text-right {
-    font-size: 12px;
+    font-size: .85em;
     padding: 2px;
     flex-basis: 20%;
-    /* align-self: flex-end; */
-    /* border-style: solid; */
     text-align: center;
+}
 
 
-
-
+@media screen and (max-width: 480px) {
+    #menu,
+    #menu a,
+    #menu a.active
+     {
+        width: 90vw;
+        font-size: .95em;
+    }
 }
