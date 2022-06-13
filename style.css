@@ -45,6 +45,8 @@ body {
     align-items: center;
     display: block;
     box-sizing: border-box;
+    
+    
 
 }
 
@@ -55,10 +57,11 @@ body {
     text-decoration: none;
     border: 1px solid rgba(0, 0, 0, 0.4);
     text-align: center;
-    display: block;
-    text-align: center;
     box-sizing: border-box;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #menu a:last-child {
@@ -66,25 +69,26 @@ body {
 }
 
 #menu a:hover {
-    background-color: #f8f8f8;
-    color: #404040;
+    background-color: #2B7CA9;
+    color: #ffffff;
 }
 
 #menu a.active {
     /* background-color: #3887be; */
     background-color: #0F3588;
     color: #ffffff;
-    border-style: solid;
-    border-color: pink;
-    display: block;
+    display: flex;
     text-align: center;
     box-sizing: border-box;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 
 #menu a.active:hover {
-    background: #3074a4;
+    /* background: #3074a4; */
+    background-color: #2367A0;
 }
 
 #legend {

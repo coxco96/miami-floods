@@ -77,7 +77,7 @@ map.on('idle', () => {
         const link = document.createElement('a');
         link.id = id;
         link.href = '#';
-        link.innerHTML = "Current view: " + '2022';
+        link.innerHTML = "Current View: " + '2022<br><br>Click to change.';
         link.className = 'active';
 
 
@@ -94,13 +94,13 @@ map.on('idle', () => {
                 map.setLayoutProperty('2022', 'visibility', 'none');
                 map.setLayoutProperty('2052', 'visibility', 'visible')
                 this.className = '';
-                link.innerHTML = "Current view: 2052"
+                link.innerHTML = "Current View: 2052"
                 visibility22 = map.getLayoutProperty('2022', 'visibility');
                 visibility52 = map.getLayoutProperty('2052', 'visibility');
             } else if (visibility22 == 'none') {
                 // if 2022 is not visible on click... set 2022 to visible and 2052 to hidden
                 this.className = 'active';
-                link.innerHTML = "Current view: 2022";
+                link.innerHTML = "Current View: 2022";
                 map.setLayoutProperty('2022', 'visibility', 'visible');
                 map.setLayoutProperty('2052', 'visibility', 'none')
                 visibility52 = map.getLayoutProperty('2052', 'visibility');
