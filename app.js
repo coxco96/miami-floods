@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY294Y285NiIsImEiOiJja3BrY2k0ZHgwa3Y0MnZwYTl3NWs4emJ5In0.ItwJEcRmF0LwO1DkHFgpZw';
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/coxco96/cl48g9gt1000214mokqw6mtkr', // "miamiflood_layersoff" style
+    style: 'mapbox://styles/coxco96/cl4dnlvpu002c16myohiiubjh', // finalfloodmap in studio
     zoom: 7.8,
     center: [-80.563368, 25.553404],
     minZoom: 7.8
@@ -25,7 +25,7 @@ map.on('load', () => {
         'layout': {
             'visibility': 'none'
         }
-    });
+    }, 'poi-label');
 
     // add 2022 raster tileset
     map.addSource('floodrisk22', {
@@ -39,7 +39,7 @@ map.on('load', () => {
         'layout': {
             'visibility': 'visible'
         }
-    });
+    }, 'poi-label');
 });
 
 
