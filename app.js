@@ -2,17 +2,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY294Y285NiIsImEiOiJja3BrY2k0ZHgwa3Y0MnZwYTl3N
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/coxco96/cl48g9gt1000214mokqw6mtkr', // "miamiflood_layersoff" style
-    zoom: 8.2,
-    center: [-80.793550, 25.561938],
-    // maxBounds: [
-    //     [-81.7, 25],
-    //     [-80, 26.802]
-    // ],
-    minZoom: 8.2
+    zoom: 7.8,
+    center: [-80.563368, 25.553404],
+    minZoom: 7.8
 });
 
 
 console.log(map.getZoom());
+
 // wait until map has finished loading
 
 map.on('load', () => {
@@ -94,8 +91,6 @@ map.on('idle', () => {
         // show or hide layer when the toggle is clicked  
         spanSlider.onclick = function (e) {
             e.stopPropagation();
-            check();
-
             // toggle layer visibility by changing the layout object's visibility property
 
             if (visibility22 == 'visible') {
@@ -116,6 +111,7 @@ map.on('idle', () => {
                 visibility22 = map.getLayoutProperty('2022', 'visibility');
             }
             check();
+            console.log(map.getCenter());
 
         };
 
@@ -123,7 +119,6 @@ map.on('idle', () => {
         const toggleId = document.getElementById('toggle-id');
         labelSwitch.append(inputCheckbox, spanSlider);
         toggleId.append(labelSwitch);
-    //    check();
 
 
 
@@ -132,7 +127,6 @@ map.on('idle', () => {
 
     // check to see if checkmark is checked to determine which year to underline
     function check () {
-        console.log("it's running");
         console.log(document.getElementById('checked').checked);
         if (!document.getElementById('checked').checked) {
             document.getElementById('true-year-1').classList.remove('underlined');
