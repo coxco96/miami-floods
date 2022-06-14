@@ -55,11 +55,11 @@ map.on('idle', () => {
     let visibility22 = map.getLayoutProperty('2022', 'visibility');
     let visibility52 = map.getLayoutProperty('2052', 'visibility');
 
-    console.log("before click. 2022: " + visibility22 + ", 2052: " + visibility52);
-
     if (!map.getLayer('2052') || !map.getLayer('2022')) {
         return;
     };
+
+    
 
     // create array of layer IDs
     // (would add more IDs to array for more buttons)
@@ -73,19 +73,28 @@ map.on('idle', () => {
             continue;
         }
 
-        // create a link
-        const link = document.createElement('a');
-        link.id = id;
-        link.href = '#';
-        link.innerHTML = "Current View: 2022. Click to change.";
-        link.className = 'active';
+    
+
+        // create toggle button 
+
+        const spanSlider = document.createElement('span'); // will become child of labelSwitch
+        spanSlider.className = 'slider';
+        spanSlider.href = '#'; 
+
+        const inputCheckbox = document.createElement('input'); // will become child of labelSwitch
+        inputCheckbox.type = 'checkbox';
+        inputCheckbox.id = 'checked';
+
+        const labelSwitch = document.createElement('label');
+        labelSwitch.className = 'switch';
+        labelSwitch.id = id;
+
 
 
         // show or hide layer when the toggle is clicked  
-        link.onclick = function (e) {
-
-            e.preventDefault();
+        spanSlider.onclick = function (e) {
             e.stopPropagation();
+            check();
 
             // toggle layer visibility by changing the layout object's visibility property
 
@@ -93,24 +102,47 @@ map.on('idle', () => {
                 // if 2022 is visible on click... set 2052 to visible and 2022 to none
                 map.setLayoutProperty('2022', 'visibility', 'none');
                 map.setLayoutProperty('2052', 'visibility', 'visible')
-                this.className = '';
-                link.innerHTML = "Current View: 2052"
+                //this.className = '';
+                //link.innerHTML = "Current View: 2052"
                 visibility22 = map.getLayoutProperty('2022', 'visibility');
                 visibility52 = map.getLayoutProperty('2052', 'visibility');
             } else if (visibility22 == 'none') {
                 // if 2022 is not visible on click... set 2022 to visible and 2052 to hidden
-                this.className = 'active';
-                link.innerHTML = "Current View: 2022";
+               // this.className = 'active';
+                //link.innerHTML = "Current View: 2022";
                 map.setLayoutProperty('2022', 'visibility', 'visible');
                 map.setLayoutProperty('2052', 'visibility', 'none')
                 visibility52 = map.getLayoutProperty('2052', 'visibility');
                 visibility22 = map.getLayoutProperty('2022', 'visibility');
             }
-            console.log("after click. 2022: " + visibility22 + ", 2052: " + visibility52);
+            check();
 
         };
 
-        const layers = document.getElementById('menu');
-        layers.appendChild(link);
+
+        const toggleId = document.getElementById('toggle-id');
+        labelSwitch.append(inputCheckbox, spanSlider);
+        toggleId.append(labelSwitch);
+    //    check();
+
+
+
+
     }
+
+    // check to see if checkmark is checked to determine which year to underline
+    function check () {
+        console.log("it's running");
+        console.log(document.getElementById('checked').checked);
+        if (!document.getElementById('checked').checked) {
+            document.getElementById('true-year-1').classList.remove('underlined');
+           document.getElementById('true-year-2').classList.add('underlined');
+        } else if (document.getElementById('checked').checked) {
+            document.getElementById('true-year-2').classList.remove('underlined');
+           document.getElementById('true-year-1').classList.add('underlined');
+        }
+    }
+   
+    //console.log(document.getElementById('toggle-text').classList);
+ 
 });
