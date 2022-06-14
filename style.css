@@ -5,6 +5,12 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
+@media screen and (max-width: 820px) {
+    iframe {
+        width: 90vw;
+    }
+}
+
 #container {
     margin: .5vh auto;
     padding: 1vh;
