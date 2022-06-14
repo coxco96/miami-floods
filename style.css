@@ -19,11 +19,7 @@ body {
     max-width: 100%;
 }
 
-@media screen and (max-width: 820px) {
-    container {
-        width: 90vw;
-    }
-}
+
 
 #map {
     border-style: solid;
