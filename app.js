@@ -11,6 +11,9 @@ const map = new mapboxgl.Map({
     customAttribution: 'Map by Court Cox | Data source: <a href="https://firststreet.org/data-access/public-access/" target="_blank">First Street Foundation</a> | <a href="https://github.com/coxco96/miami-floods" target="_blank">How was this map made?</a>'
     }));
 
+    // Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
 
 
 

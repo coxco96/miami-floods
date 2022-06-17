@@ -264,15 +264,11 @@ input:checked+.slider:before {
         width: 100%;
         margin: 1% auto 0;
     }
-
+/* 
     #the-info {
-        /* visibility: hidden; */
-        overflow: scroll;
-        /* flex-basis: 10%; */
         border: 1rem;
-        margin: .5%;
         max-height: 10%;
-    }
+    } */
 
     #footer-container {
         font-size: .8em;
@@ -280,14 +276,14 @@ input:checked+.slider:before {
 }
 
 button {
-    padding: 8px 5px;
-    font-size: 0.9em;
+    padding: 5px 5px;
+    font-size: 0.8em;
     font-weight: bolder;
     border: 2px solid rgba(244, 244, 244, 0.2);
     background: rgba(100, 100, 100, 0.9);
-    color: rgba(244, 244, 244, 0.8);
+    color: rgba(253, 253, 253, 0.924);
     /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     z-index: 9999;
     cursor: pointer;
     flex-basis: 2%;
@@ -313,7 +309,7 @@ button {
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #888;
     width: 80%;
     z-index: 999;
