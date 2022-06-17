@@ -16,7 +16,7 @@ body {
     justify-content: center;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;  
+    max-width: 100%;
 }
 
 #small-container {
@@ -46,15 +46,10 @@ body {
     border-radius: 2px;
 }
 
-@media screen and (max-width: 820px) {
-    #map {
-        flex-basis: 60%;
-    }
-}  
 
 #legend {
 
-    width: 80%;
+    width: 50%;
     flex-basis: 4%;
     margin: 1.25% auto 0;
     background-color: rgba(162, 162, 162, 0.144);
@@ -78,7 +73,7 @@ body {
     margin: auto;
     flex-basis: 60%;
     border: 2.5px solid;
-    
+
 
 }
 
@@ -126,17 +121,17 @@ body {
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+
+/* The slider */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -146,9 +141,9 @@ body {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -158,28 +153,28 @@ body {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: #0D2F85;
-  }
-  
-  input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px #0D2F85;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
 .underlined {
     text-decoration: underline #0D2F85 3px;
     text-shadow: 2px 2px 5px rgb(211, 211, 211);
-  }
+}
 
-  #description {
+#description {
     flex-basis: 10%;
     align-self: center;
     width: 98%;
@@ -189,49 +184,29 @@ body {
     max-width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.471), 0 6px 20px 0 rgba(0, 0, 0, 0.509);
     border-radius: 2px;
-    /* overflow: scroll; */
-  }
+}
 
-  p .p-text {
+p .p-text {
     border-width: .1em;
     align-self: center;
     width: 100%;
     max-width: 95%;
-  }
+}
 
-  /* .footer {
-    flex-shrink: 0;
-    flex-basis: 5%;
-    width: 100%;
-    margin: auto auto 0;
-    box-shadow: -2px -2px 6px 1px rgba(47, 47, 47, 0.836);
-    border-radius: 2px;
-    padding: 0;
-    
-    bottom: 0;
-    left: 0;
-    font-size: .8em;
-    font-weight: 600;
-    background-color: #0d2f85ef;
-    color: rgb(255, 251, 251);
-
-  } */
-
-  #footer-container {
+#footer-container {
     flex-basis: 5%;
     box-shadow: -2px -2px 6px 1px rgba(47, 47, 47, 0.836);
-    color: rgb(255, 251, 251);
     display: flex;
-    background-color: #0d2f85ef;
+    background-color: #010611ef;
     flex-direction: row;
     justify-content: center;
     margin: auto;
     width: 100%;
     max-width: 100%;
-    /* background-color: purple; */
-  }
+}
 
-  .p-footer {
+.p-footer {
+    color: rgb(255, 251, 251);
     flex-basis: 30%;
     padding: .5%;
     margin: auto;
@@ -240,31 +215,43 @@ body {
     border-right: .5px solid rgba(0, 0, 0, 0.815);
     border-left: .5px solid rgba(0, 0, 0, 0.815);
     align-items: center;
-  }
+    /* text-shadow: .5px .5px 0px rgb(211, 211, 211); */
+}
 
-
-/* @media screen and (max-width: 820px) {
-    #description {
-    
-        margin: 4% auto 2%;
-    }
-    .p-text {
-        overflow: scroll;
-    }
-}   */
+.p-footer a {
+   color: rgb(255, 251, 251); 
+}
 
 @media screen and (max-width: 820px) {
     #footer-container {
-    font-size: .8em;
+        font-size: .8em;
     }
+
     #description {
         overflow: scroll;
-        flex-basis:40%;
+        flex-basis: 20%;
         margin: 5%;
     }
+
     #small-container {
-        flex-basis: 70%;
+        flex-basis: 80%;
+    }
+    #map {
+        flex-basis: 60%;
+        margin: 5% auto 0;
+    }
+    #toggle-id {
+        flex-basis: 5%;
+        margin: 5% auto 0;
+    }
+    #toggle-text {
+        flex-basis: 2%;
+        width: 100%;
+        font-size: .90em;
+    }
+    #legend {
+        flex-basis: 4%;
+        width: 100%;
+        margin: 4% auto 0;
     }
 }
-
-  

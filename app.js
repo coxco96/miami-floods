@@ -81,10 +81,12 @@ map.on('idle', () => {
         const inputCheckbox = document.createElement('input'); // will become child of labelSwitch
         inputCheckbox.type = 'checkbox';
         inputCheckbox.id = 'checked';
+        inputCheckbox.value = "2022 if unchecked; 2052 checked";
 
         const labelSwitch = document.createElement('label');
         labelSwitch.className = 'switch';
         labelSwitch.id = id;
+        
 
 
 
