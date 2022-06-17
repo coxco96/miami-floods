@@ -17,7 +17,7 @@
 
 <body>
     <div id="big-container">
-        <div id="small-container">
+
             <div id="map"></div>
             <div id="toggle-id"></div>
             <div id="toggle-text">Click to toggle between <span id='true-year-1' class="underlined">2022</span> and
@@ -27,24 +27,28 @@
                 <div id="legend-gradient"></div>
                 <div class="legend-text-right"><b>High Flood Risk</b></div>
             </div>
-        </div>
-        <div id="description">
-            <p class="p-text">This map shows flooding Miami-Dade County could see from a storm that dropped a little
-                over 10 inches of rain in two days in 2022 and in 2052, with the additional foot of sea level rise
-                scientists predict the region could see by then. That's about what Miami-Dade saw from the rain system
-                in early June that strengthened into Tropical Storm Alex. The estimates come from nonprofit climate
-                research group <a href="https://firststreet.org" target="_blank">First Street Foundation</a> and show flood depths in centimeters from rainfall, storm surge
-                and tidal flooding.</p>
+            <button id="myBtn">More info</button>
 
-        </div>
-            <div id="footer-container">
-                <p class="p-footer">Map by: Court Cox</p>
-                <p class="p-footer">Data source: <a href="https://firststreet.org/data-access/public-access/" target="_blank">First Street Foundation</a></p>
-                <p class="p-footer"><a href="https://github.com/coxco96/miami-floods" target="_blank">How was this map made?</a></p>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="the-info">This map shows flooding Miami-Dade County could see from a storm that dropped a
+                    little
+                    over 10 inches of rain in two days in 2022 and in 2052, with the additional foot of sea level rise
+                    scientists predict the region could see by then. That's about what Miami-Dade saw from the rain
+                    system
+                    in early June that strengthened into Tropical Storm Alex. The estimates come from nonprofit climate
+                    research group <a href="https://firststreet.org" target="_blank">First Street Foundation</a> and
+                    show flood depths in centimeters from rainfall, storm surge
+                    and tidal flooding.</div>
             </div>
-    </div>
-    
 
+        </div>
+    </div>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
     <script src="app.js"></script>

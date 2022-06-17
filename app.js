@@ -1,11 +1,17 @@
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiY294Y285NiIsImEiOiJja3BrY2k0ZHgwa3Y0MnZwYTl3NWs4emJ5In0.ItwJEcRmF0LwO1DkHFgpZw';
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/coxco96/cl4dnlvpu002c16myohiiubjh', // finalfloodmap in studio
     zoom: 7.8,
     center: [-80.563368, 25.553404],
-    minZoom: 7.8
-});
+    minZoom: 7.8,
+    attributionControl: false
+}).addControl(new mapboxgl.AttributionControl({
+    customAttribution: 'Map by Court Cox | Data source: <a href="https://firststreet.org/data-access/public-access/" target="_blank">First Street Foundation</a> | <a href="https://github.com/coxco96/miami-floods" target="_blank">How was this map made?</a>'
+    }));
+
+
 
 
 console.log(map.getZoom());
@@ -142,3 +148,29 @@ map.on('idle', () => {
     //console.log(document.getElementById('toggle-text').classList);
  
 });
+
+//add info button
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
