@@ -3,99 +3,60 @@ body {
     padding: 0;
     background-color: #ffffff;
     font-family: 'Noto Serif', serif;
+    /* overflow: auto; */
 }
 
-
-#container {
-    margin: .5vh auto;
-    padding: 1vh;
+#big-container {
+    margin: auto;
+    padding: 0%;
     width: 90vw;
-    height: 92vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;  
+}
+
+#small-container {
+    flex-basis: 85%;
+    margin: 1.5% auto 0;
+    padding: .5%;
+    width: 90vw;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
+    flex-shrink: 1;
 }
-
 
 
 #map {
     border-style: solid;
     border-width: .1em;
-    flex-basis: 78%;
+    flex-basis: 80%;
     align-self: center;
     width: 90%;
-    margin: 5% auto 0;
+    margin: 2% auto 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.471), 0 6px 20px 0 rgba(0, 0, 0, 0.509);
     border-radius: 2px;
 }
 
-/* #menu {
-    width: 30%;
-    max-width: 100%;
-    flex-basis: 6%;
-    margin: 2% auto 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: block;
-    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.815), -1px 1px 2px rgba(0, 0, 0, 0.815), 1px -1px 2px rgba(0, 0, 0, 0.815), 1px 1px 2px rgba(0, 0, 0, 0.815);
-    font-size: 1.1em;
-    color: #ffffff;
-} 
-
- #menu a.initial {
-    background-color: #CEECB7;
-    color: black;
-    text-shadow: none;
-}
-
-#menu a {
-    color: #ffffff;
-    text-decoration: none;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0F3588;
-    border-radius: 2px;
-    box-shadow: 0px 0px 15px 1px rgba(3, 0, 0, 0.37);
-    padding: .75%;
-    border: .5px solid black;
-}
-
-#menu a:hover {
-    background-color: #0f3588e2;
-    color: #ffffff;
-    text-shadow: -2px -2px 3px rgba(0, 0, 0, 0.815), -2px 2px 3px rgba(0, 0, 0, 0.815), 2px -2px 3px rgba(0, 0, 0, 0.815), 2px 2px 3px rgba(0, 0, 0, 0.815);
-}
-
-#menu a.active {
-    background-color: #0F3588;
-    color: #ffffff;
-    display: flex;
-    text-align: center;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    border: 10px solid rgba(224, 17, 137, 0.82);
-}
-
-
-#menu a.active:hover {
-     background: #3074a4; 
-    background-color: #2367A0;
-} */
+@media screen and (max-width: 820px) {
+    #map {
+        flex-basis: 60%;
+    }
+}  
 
 #legend {
 
     width: 80%;
-    flex-basis: 10%;
-    margin: 3% auto 0 auto;
+    flex-basis: 4%;
+    margin: 1.5% auto 0;
     background-color: rgba(162, 162, 162, 0.144);
     border: .09em solid #0c2c846d;
     border-radius: 5px;
@@ -138,23 +99,11 @@ body {
 }
 
 
-
-/* @media screen and (max-width: 480px) {
-
-    #menu,
-    #menu a,
-    #menu a.active {
-        width: 90vw;
-        font-size: .95em;
-    }
-} */
-
-
 #toggle-id {
     width: 20%;
     max-width: 100%;
-    flex-basis: 15%;
-    margin: .5% auto;
+    flex-basis: 5%;
+    margin: 1.5% auto 0;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -163,13 +112,13 @@ body {
     text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.815), -1px 1px 2px rgba(0, 0, 0, 0.815), 1px -1px 2px rgba(0, 0, 0, 0.815), 1px 1px 2px rgba(0, 0, 0, 0.815);
     font-size: 1.1em;
     color: #ffffff;
-    /* border: 2px solid hotpink; */
 }
 
 #toggle-text {
-    margin: 2px;
+    margin: .5% auto 0;
     font-weight: 600;
     text-align: center;
+    flex-basis: 3%;
 }
 
 
@@ -229,6 +178,21 @@ body {
 .underlined {
     text-decoration: underline #0D2F85 3px;
     text-shadow: 2px 2px 5px rgb(211, 211, 211);
+  }
+
+  #description {
+    
+    /* border-style: solid; */
+    border-width: .1em;
+    flex-basis: 15%;
+    align-self: center;
+    width: 90%;
+    margin: 2% auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.471), 0 6px 20px 0 rgba(0, 0, 0, 0.509);
+    border-radius: 2px;
+    padding: .5%;
+    flex-shrink: 1;
+    max-width: 100%;
   }
 
   
