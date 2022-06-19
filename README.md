@@ -13,7 +13,7 @@
 
 ## Overview  
 
-I created the interactive Miami-Dade County flood map seen below for [this]() story by [Alex Harris]() in the Miami Herald. It depicts the water depth that each three-meter pixel has the chance of getting within a 5% probability. The map is designed to compare different areas of Miami-Dade County, along with the current projection with the future projection. For that reason, the raw values (originally in centimeters) have been exluded from the map, and the visualization is based on a color gradient scheme.  
+I created the interactive Miami-Dade County flood map seen below for [this](https://www.miamiherald.com/news/local/environment/article262390547.html) story by [Alex Harris](https://www.miamiherald.com/profile/218643730) in the [Miami Herald](https://www.miamiherald.com/). It depicts the water depth that each three-meter pixel has the chance of getting within a 5% probability. The map is designed to compare different areas of Miami-Dade County, along with the current projection with the future projection. For that reason, the raw values (originally in centimeters) have been exluded from the map, and the visualization is based on a color gradient scheme.  
 
 ![Miami Flood Map GIF](images/miamifloodfinal.gif)
 
@@ -238,7 +238,7 @@ map.on('load', () => {
         'layout': {
             'visibility': 'visible'
         }
-        // keep 'poi-label' to put basemap layers on top of raster layer
+        // keep 'poi-label' to put place label layers on top of raster layer
     }, 'poi-label');
 });
 ```
