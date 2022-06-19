@@ -13,9 +13,11 @@
 
 ## Overview  
 
-I created the interactive Miami-Dade County flood map seen below for [this]() story by [Alex Harris]() in the Miami Herald. It depicts the water depth that each three-meter pixel has the chance of getting within a 5% probability. The map is designed to compare different areas of Miami-Dade County, along with the current projection to the future projection. For that reason, the raw values (originally in centimeters) have been exluded from the map, and the visualization is based on a color gradient scheme.  
+I created the interactive Miami-Dade County flood map seen below for [this]() story by [Alex Harris]() in the Miami Herald. It depicts the water depth that each three-meter pixel has the chance of getting within a 5% probability. The map is designed to compare different areas of Miami-Dade County, along with the current projection with the future projection. For that reason, the raw values (originally in centimeters) have been exluded from the map, and the visualization is based on a color gradient scheme.  
 
 ![Miami Flood Map GIF](images/miamifloodfinal.gif)
+
+Click [here](https://coxco96.github.io/miami-floods/) for the github.io demonstration of this map.
 
 
 
@@ -26,8 +28,9 @@ This walkthrough assumes beginner-level HTML/CSS/JavaScript knowledge.
 ## Data Sources/Attribution
 
 - I received the flood data for this map in the form of geoTIFF files via email from [First Street Foundation](https://firststreet.org/). You can find First Street Foundation's full flood-related datasets [here](https://livingatlas.arcgis.com/en/browse/?q=%22First%20Street%22#d=2&q=%22First%20Street%22&type=layers&srt=name). Explore all public data from the foundation [here](https://firststreet.org/data-access/public-access/).
+
 - [Shapefile: TIGER/LINE format on the U.S. county level](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
-- The toggle switch was coded following a [W3Schools](https://www.w3schools.com/) tutorial. 
+
 ---
 
 ## Working with geoTIFF Files in QGIS
