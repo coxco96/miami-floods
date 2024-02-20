@@ -1,4 +1,4 @@
-# Mapping and styling geoTIFFs for the web: how was the Miami-Dade flood risk map made? 
+# A Journalist's Guide to Mapping and Styling geoTIFFs For the Web
 
 ## Table of Contents
 
